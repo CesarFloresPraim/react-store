@@ -31,7 +31,7 @@ export default function ProductDetail() {
 
   const handleAddToBag = (e) => {
     e.preventDefault()
-    console.log(selectedSize);
+    console.log(product, selectedSize.id);
   }
 
   return (
