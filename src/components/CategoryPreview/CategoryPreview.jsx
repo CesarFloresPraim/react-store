@@ -27,7 +27,7 @@ export default function CategoryPreview() {
             <div className="p-6 flex items-end">
               <div>
                 <h3 className="font-semibold text-white">
-                  <Link to="product/1">
+                  <Link to="product/0">
                     <span className="absolute inset-0" />
                     Removals
                   </Link>
@@ -51,7 +51,7 @@ export default function CategoryPreview() {
             <div className="p-6 flex items-end sm:absolute sm:inset-0">
               <div>
                 <h3 className="font-semibold text-white">
-                <Link to="product/2">
+                <Link to="product/1">
                     <span className="absolute inset-0" />
                     Pizza
                   </Link>
@@ -75,7 +75,7 @@ export default function CategoryPreview() {
             <div className="p-6 flex items-end sm:absolute sm:inset-0">
               <div>
                 <h3 className="font-semibold text-white">
-                <Link to="product/3">
+                <Link to="product/2">
                     <span className="absolute inset-0" />
                     Custom
                   </Link>

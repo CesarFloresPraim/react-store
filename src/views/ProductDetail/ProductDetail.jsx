@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   CheckIcon,
   QuestionMarkCircleIcon,
@@ -7,34 +7,32 @@ import {
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/outline";
 import NavHeader from "../../components/NavHeader/NavHeader";
+import products from "../../consts/products"
+import { useParams } from "react-router-dom"
 
-const product = {
-  name: "Everyday Ruck Snack",
-  href: "#",
-  price: "$220",
-  description:
-    "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
-  imageSrc:
-    "https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg",
-  imageAlt:
-    "Model wearing light green backpack with black canvas straps and front zipper pouch.",
-  breadcrumbs: [
-    { id: 1, name: "Travel", href: "#" },
-    { id: 2, name: "Bags", href: "#" },
-  ],
-  sizes: [
-    { name: "18L", description: "Perfect for a reasonable amount of snacks." },
-    { name: "20L", description: "Enough room for a serious amount of snacks." },
-  ],
-};
 const reviews = { average: 4, totalCount: 1624 };
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+
+
 export default function ProductDetail() {
+  let { id } = useParams();
+  const product = products[id]
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+
+  //* METHODS
+  const numberFormat = (number) => {
+    let formatter = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'MXN' })
+    return formatter.format(number)
+  }
+
+  const handleAddToBag = (e) => {
+    e.preventDefault()
+    console.log(selectedSize);
+  }
 
   return (
     <>
@@ -84,7 +82,7 @@ export default function ProductDetail() {
 
               <div className="flex items-center">
                 <p className="text-lg text-gray-900 sm:text-xl">
-                  {product.price}
+                  {numberFormat(selectedSize.price)}
                 </p>
 
                 <div className="ml-4 pl-4 border-l border-gray-300">
@@ -138,7 +136,7 @@ export default function ProductDetail() {
               <img
                 src={product.imageSrc}
                 alt={product.imageAlt}
-                className="w-full h-full object-center object-cover"
+                className="w-full h-full object-center object-contain"
               />
             </div>
           </div>
@@ -150,7 +148,7 @@ export default function ProductDetail() {
                 Product options
               </h2>
 
-              <form>
+              <form onSubmit={handleAddToBag}>
                 <div className="sm:flex sm:justify-between">
                   {/* Size selector */}
                   <RadioGroup value={selectedSize} onChange={setSelectedSize}>
@@ -201,18 +199,6 @@ export default function ProductDetail() {
                     </div>
                   </RadioGroup>
                 </div>
-                <div className="mt-4">
-                  <a
-                    href="#"
-                    className="group inline-flex text-sm text-gray-500 hover:text-gray-700"
-                  >
-                    <span>What size should I buy?</span>
-                    <QuestionMarkCircleIcon
-                      className="flex-shrink-0 ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
                 <div className="mt-10">
                   <button
                     type="submit"
@@ -227,11 +213,11 @@ export default function ProductDetail() {
                     className="group inline-flex text-base font-medium"
                   >
                     <ShieldCheckIcon
-                      className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                      className="flex-shrink-0 mr-2 h-6 w-6 text-green-400 group-hover:text-green-500"
                       aria-hidden="true"
                     />
                     <span className="text-gray-500 hover:text-gray-700">
-                      Lifetime Guarantee
+                      Secure payment powered by Stripe
                     </span>
                   </a>
                 </div>
