@@ -1,4 +1,11 @@
+let cartLocal = []
+try {
+  cartLocal = JSON.parse(localStorage.getItem('cart')) || [];
+} catch(e) {
+  console.log('error parsing');
+  cartLocal = []
+}
 export default {
-  cart: JSON.parse(localStorage.getItem("cart")) || [],
+  cart: cartLocal,
   productDetail: {}
 };

@@ -8,14 +8,9 @@ import { Link } from "react-router-dom";
 export default function CategoryPreview() {
   return (
     <>
-      <div className="ml-5 sm:flex sm:items-baseline sm:justify-between">
-        <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
-          Best sellers
-        </h2>
-      </div>
       <div
         style={{ minHeight: "350px" }}
-        className="mt-5 min-h-full grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2"
+        className=" min-h-full grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2"
       >
         <div className="relative flex">
           <img

@@ -45,31 +45,31 @@ export default function NavHeader(props) {
     }
     return;
   };
-
+  //* METHODS
   const handleLogout = () => {
     dispatch(logoutUser());
   };
-
   const sumCart = () => {
     let total = 0
     for (const item of cart) {
-      total += item.quantity
+      total += parseInt(item.quantity)
     }
-    return total;
-  };
-  //WATCHERS
-  useEffect(()=> {
-    setCartCount(sumCart())
-  },[])
+    console.log(total);
+    return total
+  }
 
-  useEffect(()=> {
-    console.log('cart changes');
+  //* WATCHERS
+  useEffect(() => {
     setCartCount(sumCart())
-  },[cart,])
+  }, [])
+
+  useEffect(() => {
+    setCartCount(sumCart())
+  }, [cart,])
 
   return (
     <Popover>
-      <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
+      <div className=" fixed z-50 bg-gray-50 shadow top-0 pt-4 px-4 min-w-full sm:px-6 lg:px-8" style={{ minHeight: '70px' }}>
         <nav
           className="relative flex items-center justify-around sm:h-10 lg:justify-start"
           aria-label="Global"
@@ -88,20 +88,18 @@ export default function NavHeader(props) {
               </div>
             </div>
           </div>
-          <div className="hidden md:flex md:ml-10 md:pr-4 md:space-x-8">
+          <div className="hidden md:flex md:pr-4 md:space-x-8 md:ml-auto">
             {isHomeNav()}
             <Link
               to="/auth"
-              className={`font-medium text-indigo-600 hover:text-indigo-500 ${
-                !isTokenValid ? "" : "hidden"
-              } ${isAuth? 'hidden': ''}`}
+              className={`font-medium text-indigo-600 hover:text-indigo-500 ${!isTokenValid ? "" : "hidden"
+                } ${isAuth ? 'hidden' : ''}`}
             >
               Auth
             </Link>
             <div
-              className={`font-medium text-red-600 hover:text-red-500 ${
-                isTokenValid ? "" : "hidden"
-              }`}
+              className={`font-medium text-red-600 hover:text-red-500 ${isTokenValid ? "" : "hidden"
+                }`}
               onClick={handleLogout}
             >
               Logout
@@ -112,7 +110,7 @@ export default function NavHeader(props) {
               className="font-medium text-gray-500 hover:text-gray-900 flex items-center"
             >
               <ShoppingCartIcon className="h-6 w-6"></ShoppingCartIcon>
-              <div className="font-medium text-lg ml-1">{cartCount}</div>
+              <div className="font-medium text-lg ml-1">{parseInt(cartCount)}</div>
             </a>
           </div>
         </nav>

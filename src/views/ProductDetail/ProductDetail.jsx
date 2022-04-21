@@ -3,6 +3,7 @@ import {
   CheckIcon,
   QuestionMarkCircleIcon,
   StarIcon,
+  InformationCircleIcon
 } from "@heroicons/react/solid";
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/outline";
@@ -145,6 +146,15 @@ export default function ProductDetail() {
                 />
                 <p className="ml-2 text-sm text-gray-500">
                   In stock and ready to ship
+                </p>
+              </div>
+              <div className="mt-6 flex items-center">
+                <InformationCircleIcon
+                  className="flex-shrink-0 w-5 h-5 text-cyan-500"
+                  aria-hidden="true"
+                />
+                <p className="ml-2 text-sm text-gray-500">
+                  Minimum order starts at {selectedSize?.minQuantity}, adding this product to your cart adds {selectedSize?.minQuantity}.
                 </p>
               </div>
             </section>

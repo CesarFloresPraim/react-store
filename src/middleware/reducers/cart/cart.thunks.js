@@ -5,16 +5,8 @@ export const addCart = (product, selectedSize) => (dispatch) => {
   dispatch(actions.addCart({ product, selectedSize }));
 };
 
-export const deleteCart = (product, selectedSize) => (dispatch) => {
-  dispatch(actions.deleteCart({ product, selectedSize }));
-};
-
-export const increaseQuantity = (product, selectedSize) => (dispatch) => {
-  dispatch(actions.increaseQuantity({ product, selectedSize }));
-};
-
-export const decreaseQuantity = (product, selectedSize) => (dispatch) => {
-  dispatch(actions.decreaseQuantity({ product, selectedSize }));
+export const deleteCart = (id) => (dispatch) => {
+  dispatch(actions.deleteCart({id}));
 };
 
 export const getProduct = (id) => (dispatch) => {

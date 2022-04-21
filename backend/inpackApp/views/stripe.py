@@ -8,7 +8,6 @@ from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from ..models import *
 
-
 class CheckoutSession(APIView):
     permission_classes = [AllowAny]
 
@@ -18,34 +17,20 @@ class CheckoutSession(APIView):
     def post(self, request):
         # retrieve order items from order
         data = JSONParser().parse(request)
-        orderItems = data["order_items"]
+        orderItems = data["cart"]
+        print(orderItems)
         # create a stripe instance
-        stripe.api_key = config('STRIPE_SECRET_KEY')
+        stripe.api_key = config('REACT_STRIPE_SECRET')
 
-        products = {
-            0: 'stripeId',
-            1: 320,
-            2: 160
-        }
-        line_items = []
-        for item in orderItems:
-            line_items.append({
-                "price": products[item.id],
-                "quantity": item.quantity,
-                "tax_rates": [
-                    config('TAX_RATE_ID'),
-                ],
-            })
         session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=orderItems,
             mode='payment',
-            success_url=config("VUE_APP_URL") +
-            '?#/thanks/' + str(data["order_id"]),
-            cancel_url=config("VUE_APP_URL") + '?#/cart',
-            locale="en", #change to spanish
-            # discounts=[{"coupon": data["coupon"]["stripe_coupon"]}],
-            # customer=userExt.stripe_id,
+            success_url=config("REACT_APP_URL") +
+            'thanks',
+            cancel_url=config("REACT_APP_URL") + 'cart',
+            locale="en",  # change to spanish
+
         )
 
         # returns session id

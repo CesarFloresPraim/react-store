@@ -11,7 +11,7 @@ function cartReducer(state = initialState, { type, payload }) {
         console.log(payload.selectedSize);
         let item = {
           id: payload.product.id,
-          quantity: 1,
+          quantity: payload.selectedSize.minQuantity,
           name: payload.product.name,
           sizeId: payload.selectedSize.id,
           sizeName: payload.selectedSize.name,
@@ -28,46 +28,17 @@ function cartReducer(state = initialState, { type, payload }) {
         ...state,
         cart: [...state.cart],
       };
-    case actionTypes.INCREASE_QUANTITY:
-      var foundIdx = state.cart.findIndex((el) => {
-        return el.id == payload.id;
-      });
-      if (foundIdx >= 0) {
-        let _cart = {
-          ...state.cart[foundIdx],
-          quantity: state.cart[foundIdx].quantity++,
-        };
-        state.cart[foundIdx] = _cart;
-      }
-      localStorage.setItem("cart", state.cart);
-      return {
-        ...state,
-      };
-    case actionTypes.DECREASE_QUANTITY:
-      var foundIdx = state.cart.findIndex((el) => {
-        return el.id == payload.id;
-      });
-      if (foundIdx >= 0 && state.cart[foundIdx].quantity > 1) {
-        let _cart = {
-          ...state.cart[foundIdx],
-          quantity: state.cart[foundIdx].quantity--,
-        };
-        state.cart[foundIdx] = _cart;
-      }
-      localStorage.setItem("cart", state.cart);
-      return {
-        ...state,
-      };
     case actionTypes.DELETE_CART:
-      var foundIdx = state.cart.findIndex((el) => {
-        return el.id == payload.id;
-      });
-      if (foundIdx >= 0) {
-        state.cart.splice(foundIdx, 1);
+      console.log(state.cart);
+
+      if(state.cart[payload.id]) {
+        state.cart.splice(payload.id, 1);
       }
-      localStorage.setItem("cart", state.cart);
+      console.log(state.cart);
+      localStorage.setItem("cart", JSON.stringify(state.cart));
       return {
         ...state,
+        cart: [...state.cart],
       };
     case actionTypes.GET_PRODUCT:
       return {
@@ -75,8 +46,9 @@ function cartReducer(state = initialState, { type, payload }) {
         productDetail: payload,
       };
     case actionTypes.UPDATE_PRODUCT:
-      
-      state.cart[payload.id].quantity = payload.quantity
+      if(state.cart[payload.id]){
+        state.cart[payload.id].quantity = payload.quantity
+      }
       localStorage.setItem("cart", JSON.stringify(state.cart));
 
       return {

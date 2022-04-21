@@ -212,3 +212,118 @@ IndexError: list index out of range
 [INFO] 2022-04-20 21:14:34,942 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
 [INFO] 2022-04-20 21:15:26,993 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
 [INFO] 2022-04-20 21:15:40,220 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:13:47,862 Watching for file changes with StatReloader
+[INFO] 2022-04-21 18:13:55,087 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:16:34,328 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:21:53,774 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:26:55,947 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:28:21,349 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:31:18,826 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:32:06,529 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:32:37,501 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:33:39,905 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:52:08,925 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:52:29,117 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:52:30,925 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 18:52:52,637 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 19:23:38,481 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 19:34:21,619 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 19:34:50,395 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 19:35:12,733 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 19:42:15,740 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 20:22:06,744 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:22:09,091 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-21 20:23:58,653 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-21 20:23:59,297 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:27:27,148 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-21 20:27:27,716 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:28:40,260 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/consts/products.py changed, reloading.
+[INFO] 2022-04-21 20:28:40,873 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:46:07,246 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:46:49,728 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/consts/products.py changed, reloading.
+[INFO] 2022-04-21 20:46:50,287 Watching for file changes with StatReloader
+[ERROR] 2022-04-21 20:46:53,967 Internal Server Error: /api/v1.0/products/0
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py", line 18, in get
+    return JsonResponse(products[id], safe=False)
+TypeError: 'module' object is not subscriptable
+[ERROR] 2022-04-21 20:46:53,977 "GET /api/v1.0/products/0 HTTP/1.1" 500 88083
+[INFO] 2022-04-21 20:47:50,021 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-21 20:47:50,611 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:47:53,837 "GET /api/v1.0/products/0 HTTP/1.1" 200 1158
+[INFO] 2022-04-21 20:48:55,867 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-21 20:48:56,455 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:49:25,424 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-21 20:49:25,971 Watching for file changes with StatReloader
+[ERROR] 2022-04-21 20:49:27,101 Internal Server Error: /api/v1.0/products/0
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py", line 18, in get
+    return JsonResponse(products[id], safe=False)
+NameError: name 'products' is not defined
+[ERROR] 2022-04-21 20:49:27,106 "GET /api/v1.0/products/0 HTTP/1.1" 500 88040
+[INFO] 2022-04-21 20:49:39,084 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-21 20:49:39,737 Watching for file changes with StatReloader
+[INFO] 2022-04-21 20:49:40,212 "GET /api/v1.0/products/0 HTTP/1.1" 200 1158
+[INFO] 2022-04-21 20:50:31,035 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/stripe.py changed, reloading.
+[INFO] 2022-04-21 20:50:31,688 Watching for file changes with StatReloader
+[INFO] 2022-04-21 21:22:44,566 "OPTIONS /api/v1.0/checkout/ HTTP/1.1" 200 0
+[INFO] 2022-04-21 21:22:49,260 "POST /api/v1.0/checkout/ HTTP/1.1" 200 75
+[INFO] 2022-04-21 21:25:24,116 "POST /api/v1.0/checkout/ HTTP/1.1" 200 75
+[INFO] 2022-04-21 21:57:08,759 "POST /api/v1.0/checkout/ HTTP/1.1" 200 75
+[INFO] 2022-04-21 22:00:21,253 "POST /api/v1.0/checkout/ HTTP/1.1" 200 75
+[INFO] 2022-04-21 22:13:58,898 "GET /api/v1.0/products/0 HTTP/1.1" 200 1158
+[INFO] 2022-04-21 22:36:45,133 "GET /api/v1.0/products/0 HTTP/1.1" 200 1158
+[ERROR] 2022-04-21 22:37:02,764 Internal Server Error: /api/v1.0/products/1
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py", line 66, in get
+    return JsonResponse(products[id], safe=False)
+IndexError: list index out of range
+[ERROR] 2022-04-21 22:37:02,792 "GET /api/v1.0/products/1 HTTP/1.1" 500 87925

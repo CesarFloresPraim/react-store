@@ -1,14 +1,4 @@
-import rest_framework_jwt
-from django.core.exceptions import ObjectDoesNotExist
-from django.http import JsonResponse
-from rest_framework import authentication, permissions
-from rest_framework.views import APIView
-from datetime import date
 from decouple import config
-#from ..models import *
-#from ..serializers import *
-
-
 products = [
     {
         'id': 0,
@@ -57,10 +47,3 @@ products = [
         ],
     },
 ]
-
-class ProductView(APIView):
-    authentication_classes = []
-    permission_classes = []
-
-    def get(self, request, id):
-        return JsonResponse(products[id], safe=False)
