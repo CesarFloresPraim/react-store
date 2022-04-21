@@ -25,9 +25,25 @@ const decreaseQuantity = (payload) => {
     payload,
   };
 };
+const getProduct = (payload) => {
+  return {
+    type: actionTypes.GET_PRODUCT,
+    payload,
+  };
+};
+
+const updateProduct = (payload) => {
+  return {
+    type: actionTypes.UPDATE_PRODUCT,
+    payload,
+  };
+};
+
 export default {
   addCart,
   deleteCart,
   increaseQuantity,
   decreaseQuantity,
+  getProduct,
+  updateProduct
 };

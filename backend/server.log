@@ -12,3 +12,203 @@
 [INFO] 2022-04-19 23:13:15,134 Watching for file changes with StatReloader
 [INFO] 2022-04-19 23:47:47,932 D:\Binara\react-store\frontend\backend\inpack\urls.py changed, reloading.
 [INFO] 2022-04-19 23:47:48,417 Watching for file changes with StatReloader
+[INFO] 2022-04-20 11:06:52,357 Watching for file changes with StatReloader
+[INFO] 2022-04-20 11:07:17,272 D:\Binara\react-store\frontend\backend\inpackApp\views\__init__.py changed, reloading.
+[INFO] 2022-04-20 11:07:17,934 Watching for file changes with StatReloader
+[INFO] 2022-04-20 11:07:23,040 D:\Binara\react-store\frontend\backend\inpackApp\urls.py changed, reloading.
+[INFO] 2022-04-20 11:07:23,658 Watching for file changes with StatReloader
+[WARNING] 2022-04-20 11:07:59,482 Not Found: /api
+[WARNING] 2022-04-20 11:07:59,483 "GET /api HTTP/1.1" 404 2726
+[WARNING] 2022-04-20 11:07:59,598 Not Found: /favicon.ico
+[WARNING] 2022-04-20 11:07:59,599 "GET /favicon.ico HTTP/1.1" 404 2750
+[INFO] 2022-04-20 11:08:09,359 "GET /api/v1.0/products HTTP/1.1" 301 0
+[INFO] 2022-04-20 11:08:09,363 "GET /api/v1.0/products/ HTTP/1.1" 200 817
+[INFO] 2022-04-20 11:25:45,927 D:\Binara\react-store\frontend\backend\inpackApp\urls.py changed, reloading.
+[INFO] 2022-04-20 11:25:46,456 Watching for file changes with StatReloader
+[INFO] 2022-04-20 11:30:04,292 D:\Binara\react-store\frontend\backend\inpackApp\views\__init__.py changed, reloading.
+[INFO] 2022-04-20 11:30:04,912 Watching for file changes with StatReloader
+[INFO] 2022-04-20 11:30:37,030 D:\Binara\react-store\frontend\backend\inpackApp\urls.py changed, reloading.
+[INFO] 2022-04-20 11:30:37,599 Watching for file changes with StatReloader
+[WARNING] 2022-04-20 11:30:43,682 Not Found: /api/v1.0/products/0
+[WARNING] 2022-04-20 11:30:43,683 "GET /api/v1.0/products/0 HTTP/1.1" 404 2850
+[WARNING] 2022-04-20 11:40:06,869 Not Found: /api/v1.0/products/0
+[WARNING] 2022-04-20 11:40:06,870 "GET /api/v1.0/products/0 HTTP/1.1" 404 2850
+[INFO] 2022-04-20 11:40:38,436 D:\Binara\react-store\frontend\backend\inpackApp\urls.py changed, reloading.
+[INFO] 2022-04-20 11:40:38,974 Watching for file changes with StatReloader
+[INFO] 2022-04-20 11:40:42,537 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[WARNING] 2022-04-20 11:59:20,120 Not Found: /api/products/0
+[WARNING] 2022-04-20 11:59:20,121 "GET /api/products/0 HTTP/1.1" 404 2759
+[WARNING] 2022-04-20 11:59:24,647 Not Found: /api/products/0
+[WARNING] 2022-04-20 11:59:24,647 "GET /api/products/0 HTTP/1.1" 404 2759
+[INFO] 2022-04-20 11:59:59,785 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:00:01,471 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:00:53,780 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:02:12,199 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:03:21,932 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:03:23,215 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:04:57,990 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:05:20,615 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:05:32,127 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:05:40,890 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:05:42,785 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:05:45,485 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:08:16,353 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:08:18,231 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:08:20,278 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:08:31,918 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:09:16,156 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:09:18,802 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:09:33,146 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:11:22,312 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:11:26,235 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:11:39,503 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:12:19,746 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:12:32,750 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:12:34,360 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:12:38,609 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:13:44,130 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:13:45,110 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:14:10,051 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:14:17,643 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:15:28,632 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:15:31,845 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:15:34,647 "GET /api/v1.0/products/0 HTTP/1.1" 200 815
+[INFO] 2022-04-20 12:16:20,724 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 12:16:21,211 Watching for file changes with StatReloader
+[INFO] 2022-04-20 12:16:23,981 "GET /api/v1.0/products/0 HTTP/1.1" 200 846
+[INFO] 2022-04-20 12:19:18,996 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 12:19:19,518 Watching for file changes with StatReloader
+[INFO] 2022-04-20 12:19:37,640 "GET /api/v1.0/products/0 HTTP/1.1" 200 843
+[INFO] 2022-04-20 12:20:28,680 "GET /api/v1.0/products/0 HTTP/1.1" 200 843
+[INFO] 2022-04-20 12:20:32,313 "GET /api/v1.0/products/0 HTTP/1.1" 200 843
+[INFO] 2022-04-20 12:20:59,172 "GET /api/v1.0/products/0 HTTP/1.1" 200 843
+[INFO] 2022-04-20 12:21:14,632 "GET /api/v1.0/products/0 HTTP/1.1" 200 843
+[INFO] 2022-04-20 12:25:35,640 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 12:25:36,165 Watching for file changes with StatReloader
+[INFO] 2022-04-20 12:25:38,484 "GET /api/v1.0/products/0 HTTP/1.1" 200 887
+[INFO] 2022-04-20 12:25:48,856 "GET /api/v1.0/products/0 HTTP/1.1" 200 887
+[ERROR] 2022-04-20 12:26:04,060 Internal Server Error: /api/v1.0/products/1
+Traceback (most recent call last):
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Binara\react-store\frontend\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Binara\react-store\frontend\backend\inpackApp\views\products.py", line 67, in get
+    return JsonResponse(products[id], safe=False)
+IndexError: list index out of range
+[ERROR] 2022-04-20 12:26:04,069 "GET /api/v1.0/products/1 HTTP/1.1" 500 110595
+[INFO] 2022-04-20 12:27:45,040 "GET /api/v1.0/products/0 HTTP/1.1" 200 887
+[INFO] 2022-04-20 12:28:32,925 "GET /api/v1.0/products/0 HTTP/1.1" 200 887
+[INFO] 2022-04-20 12:30:26,074 "GET /api/v1.0/products/0 HTTP/1.1" 200 887
+[INFO] 2022-04-20 12:30:46,998 "GET /api/v1.0/products/0 HTTP/1.1" 200 887
+[INFO] 2022-04-20 12:32:23,422 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 12:32:23,905 Watching for file changes with StatReloader
+[INFO] 2022-04-20 12:32:57,833 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 12:32:58,332 Watching for file changes with StatReloader
+[INFO] 2022-04-20 12:33:00,442 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:33:05,734 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:34:01,704 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:34:26,578 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:35:58,637 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:37:01,508 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:37:26,979 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:38:48,900 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:39:24,988 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:39:39,052 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:43:23,609 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:43:47,165 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:47:56,191 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:47:58,836 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:50:44,264 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:51:48,436 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:52:39,561 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:53:27,835 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:53:53,623 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:54:26,062 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:55:37,483 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:57:22,883 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:57:33,676 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:58:01,933 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 12:58:32,763 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:06:36,527 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:06:47,002 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:07:11,103 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:07:39,597 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:09:44,050 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:12:48,035 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:16:45,351 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:17:09,495 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:18:27,453 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:20:10,510 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:24:11,298 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:25:33,570 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:26:14,730 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:26:21,543 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:26:30,013 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:30:01,606 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:30:27,379 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:30:35,576 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:31:17,252 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:31:44,864 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:32:09,230 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:32:16,566 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:32:21,380 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:32:25,470 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:32:34,714 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:32:40,845 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:33:47,104 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:37:21,068 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:37:44,002 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 13:37:56,185 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:20:40,211 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:20:44,805 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:20:51,510 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:20:51,825 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:21:08,189 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:21:27,091 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:21:34,904 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:22:22,559 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:22:25,372 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:22:46,395 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:24:02,583 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:24:29,354 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:24:32,020 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:25:22,640 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:26:03,927 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:26:05,842 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:26:18,271 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:27:18,069 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:27:28,123 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:28:24,062 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:30:29,445 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:30:32,172 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:30:34,910 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:30:47,366 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:31:04,854 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:31:45,682 "GET /api/v1.0/products/0 HTTP/1.1" 200 823
+[INFO] 2022-04-20 15:35:31,392 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 15:35:31,930 Watching for file changes with StatReloader
+[INFO] 2022-04-20 15:35:42,573 "GET /api/v1.0/products/0 HTTP/1.1" 200 1006
+[INFO] 2022-04-20 15:36:28,545 "GET /api/v1.0/products/0 HTTP/1.1" 200 1006
+[INFO] 2022-04-20 15:37:06,351 "GET /api/v1.0/products/0 HTTP/1.1" 200 1006
+[WARNING] 2022-04-20 16:07:34,188 Not Found: /api/v1.0/products/undefined
+[WARNING] 2022-04-20 16:07:34,189 "GET /api/v1.0/products/undefined HTTP/1.1" 404 2885
+[INFO] 2022-04-20 20:52:22,463 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 20:52:23,012 Watching for file changes with StatReloader
+[INFO] 2022-04-20 20:52:25,761 D:\Binara\react-store\frontend\backend\inpackApp\views\products.py changed, reloading.
+[INFO] 2022-04-20 20:52:26,263 Watching for file changes with StatReloader
+[INFO] 2022-04-20 21:14:34,942 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-20 21:15:26,993 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063
+[INFO] 2022-04-20 21:15:40,220 "GET /api/v1.0/products/0 HTTP/1.1" 200 1063

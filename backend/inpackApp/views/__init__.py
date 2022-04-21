@@ -1,3 +1,2 @@
-from .csrfToken import *
-from .productList import *
+from .products import *
 from .stripe import *

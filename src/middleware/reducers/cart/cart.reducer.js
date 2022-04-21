@@ -1,38 +1,32 @@
 import initialState from "./cart.initialState";
 import actionTypes from "./cart.actionTypes";
 
-function cartReducer(state = initialState, {type, payload}) {
+function cartReducer(state = initialState, { type, payload }) {
   switch (type) {
     case actionTypes.ADD_CART:
-      var foundIdx = state.cart.findIndex((el) => {
-        return el.id == payload.id;
+      var foundProductIdx = state.cart.findIndex((el) => {
+        return el.sizeId == payload.selectedSize.id;
       });
-      if (foundIdx === -1) {
-        let _cart = {
-          id: payload.id,
+      if (foundProductIdx === -1) {
+        console.log(payload.selectedSize);
+        let item = {
+          id: payload.product.id,
           quantity: 1,
-          name: payload.name,
-          sizeId: payload.size.id,
-          sizeName: payload.size.name,
-          sizePrice: payload.size.price,
-          imageSrc: payload.size.imageSrc,
+          name: payload.product.name,
+          sizeId: payload.selectedSize.id,
+          sizeName: payload.selectedSize.name,
+          sizePrice: payload.selectedSize.price,
+          imageSrc: payload.selectedSize.imageSrc,
+          imageAlt: payload.product.imageAlt,
+          href: payload.selectedSize.href,
+          minQuantity: payload.selectedSize.minQuantity,
         };
-        state.cart.push(_cart);
-      } else {
-        let _cart = {
-          id: payload.id,
-          quantity: payload.quantity++,
-          name: payload.name,
-          sizeId: payload.size.id,
-          sizeName: payload.size.name,
-          sizePrice: payload.size.price,
-          imageSrc: payload.size.imageSrc,
-        };
-        state.cart[foundIdx] = _cart;
+        state.cart.push(item);
       }
-      localStorage.setItem("cart", state.cart);
+      localStorage.setItem("cart", JSON.stringify(state.cart));
       return {
         ...state,
+        cart: [...state.cart],
       };
     case actionTypes.INCREASE_QUANTITY:
       var foundIdx = state.cart.findIndex((el) => {
@@ -74,6 +68,20 @@ function cartReducer(state = initialState, {type, payload}) {
       localStorage.setItem("cart", state.cart);
       return {
         ...state,
+      };
+    case actionTypes.GET_PRODUCT:
+      return {
+        ...state,
+        productDetail: payload,
+      };
+    case actionTypes.UPDATE_PRODUCT:
+      
+      state.cart[payload.id].quantity = payload.quantity
+      localStorage.setItem("cart", JSON.stringify(state.cart));
+
+      return {
+        ...state,
+        cart: [...state.cart],
       };
     default:
       return state;

@@ -20,6 +20,10 @@ export default function NavHeader(props) {
   const dispatch = useDispatch();
   //REDUX STATE
   const { accessToken, isTokenValid, lastLoginTime } = useSelector((state) => state.auth);
+  const { cart } = useSelector((state) => state.cart);
+
+  //LOCAL STATE
+  const [cartCount, setCartCount] = useState(0);
 
   //PROPS
   const { isAuth } = props;
@@ -45,6 +49,23 @@ export default function NavHeader(props) {
   const handleLogout = () => {
     dispatch(logoutUser());
   };
+
+  const sumCart = () => {
+    let total = 0
+    for (const item of cart) {
+      total += item.quantity
+    }
+    return total;
+  };
+  //WATCHERS
+  useEffect(()=> {
+    setCartCount(sumCart())
+  },[])
+
+  useEffect(()=> {
+    console.log('cart changes');
+    setCartCount(sumCart())
+  },[cart,])
 
   return (
     <Popover>
@@ -87,11 +108,11 @@ export default function NavHeader(props) {
             </div>
 
             <a
-              href="#"
+              href="/cart"
               className="font-medium text-gray-500 hover:text-gray-900 flex items-center"
             >
               <ShoppingCartIcon className="h-6 w-6"></ShoppingCartIcon>
-              <div className="font-medium text-lg ml-1">0</div>
+              <div className="font-medium text-lg ml-1">{cartCount}</div>
             </a>
           </div>
         </nav>
@@ -133,11 +154,11 @@ export default function NavHeader(props) {
                 </a>
               ))}
               <a
-                href="#"
+                href="/cart"
                 className="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 items-center"
               >
                 <ShoppingCartIcon className="h-6 w-6 mr-1"></ShoppingCartIcon>
-                <div className="font-medium text-lg ml-1">0</div>
+                <div className="font-medium text-lg ml-1">{cartCount}</div>
 
               </a>
             </div>

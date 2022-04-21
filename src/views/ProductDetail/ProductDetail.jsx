@@ -7,10 +7,10 @@ import {
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/outline";
 import NavHeader from "../../components/NavHeader/NavHeader";
-import products from "../../consts/products"
-import { useParams } from "react-router-dom"
-
-const reviews = { average: 4, totalCount: 1624 };
+import { useParams, useSearchParams } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux";
+import { addCart, getProduct } from "../../middleware/reducers/cart/cart.thunks"
+const reviews = { average: 4, totalCount: 3 };
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -19,19 +19,39 @@ function classNames(...classes) {
 
 
 export default function ProductDetail() {
+  const dispatch = useDispatch()
   let { id } = useParams();
-  const product = products[id]
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
+  const { productDetail } = useSelector((state) => state.cart)
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedSize, setSelectedSize] = useState(null);
+
+
+  useEffect(()=>{
+    dispatch(getProduct(id))
+  },[])
+
+  useEffect(()=>{
+    let selectedId = searchParams.get("selectedSizeId")
+    if (productDetail && productDetail?.sizes){
+      if(selectedId){
+        setSelectedSize(productDetail?.sizes[selectedId])
+      } else {
+        setSelectedSize(productDetail?.sizes[0])
+      }
+    }
+  },[productDetail])
+
+  
   //* METHODS
   const numberFormat = (number) => {
     let formatter = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'MXN' })
-    return formatter.format(number)
+    return formatter.format(parseFloat(number))
   }
 
   const handleAddToBag = (e) => {
     e.preventDefault()
-    console.log(product, selectedSize.id);
+    dispatch(addCart(productDetail, selectedSize))
   }
 
   return (
@@ -43,7 +63,7 @@ export default function ProductDetail() {
           <div className="lg:max-w-lg lg:self-end">
             <nav aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-2">
-                {product.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
+                {productDetail.breadcrumbs?.map((breadcrumb, breadcrumbIdx) => (
                   <li key={breadcrumb.id}>
                     <div className="flex items-center text-sm">
                       <a
@@ -52,7 +72,7 @@ export default function ProductDetail() {
                       >
                         {breadcrumb.name}
                       </a>
-                      {breadcrumbIdx !== product.breadcrumbs.length - 1 ? (
+                      {breadcrumbIdx !== productDetail.breadcrumbs.length - 1 ? (
                         <svg
                           viewBox="0 0 20 20"
                           xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +91,7 @@ export default function ProductDetail() {
 
             <div className="mt-4">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                {product.name}
+                {productDetail?.name}
               </h1>
             </div>
 
@@ -82,7 +102,7 @@ export default function ProductDetail() {
 
               <div className="flex items-center">
                 <p className="text-lg text-gray-900 sm:text-xl">
-                  {numberFormat(selectedSize.price)}
+                  {numberFormat(selectedSize?.price || 0)}
                 </p>
 
                 <div className="ml-4 pl-4 border-l border-gray-300">
@@ -115,7 +135,7 @@ export default function ProductDetail() {
               </div>
 
               <div className="mt-4 space-y-6">
-                <p className="text-base text-gray-500">{product.description}</p>
+                <p className="text-base text-gray-500">{productDetail.description}</p>
               </div>
 
               <div className="mt-6 flex items-center">
@@ -134,8 +154,8 @@ export default function ProductDetail() {
           <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
             <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
               <img
-                src={product.imageSrc}
-                alt={product.imageAlt}
+                src={selectedSize?.imageSrc}
+                alt={productDetail.imageAlt}
                 className="w-full h-full object-center object-contain"
               />
             </div>
@@ -156,10 +176,10 @@ export default function ProductDetail() {
                       Size
                     </RadioGroup.Label>
                     <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                      {product.sizes.map((size) => (
+                      {productDetail.sizes?.map((size) => (
                         <RadioGroup.Option
                           as="div"
-                          key={size.name}
+                          key={size?.name}
                           value={size}
                           className={({ active }) =>
                             classNames(
@@ -174,13 +194,13 @@ export default function ProductDetail() {
                                 as="p"
                                 className="text-base font-medium text-gray-900"
                               >
-                                {size.name}
+                                {size?.name}
                               </RadioGroup.Label>
                               <RadioGroup.Description
                                 as="p"
                                 className="mt-1 text-sm text-gray-500"
                               >
-                                {size.description}
+                                {size?.description}
                               </RadioGroup.Description>
                               <div
                                 className={classNames(
