@@ -1,3 +1,4 @@
+import logo from "../../assets/images/inpack-logo.webp"
 export default function Rejected() {
     return (
 

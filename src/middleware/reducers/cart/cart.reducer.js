@@ -29,8 +29,6 @@ function cartReducer(state = initialState, { type, payload }) {
         cart: [...state.cart],
       };
     case actionTypes.DELETE_CART:
-      console.log(state.cart);
-
       if(state.cart[payload.id]) {
         state.cart.splice(payload.id, 1);
       }

@@ -31,7 +31,7 @@ products = [
                 'id': 'price_1Kr6WwFIG5UVV1Tg6hgDc5Wm',
                 'name': "15cm x 35cm x 20cm",
                 'description': "Perfect for a reasonable amount of snacks.",
-                'price': 220,
+                'price': 7,
                 'imageSrc': 'https://binarasolutions.s3.us-east-2.amazonaws.com/inpack/carton_box.png',
                 'href': config('REACT_APP_URL') + 'product/' + str(0) + '/?selectedSizeId=' + str(0),
                 'minQuantity': 20
@@ -40,7 +40,7 @@ products = [
                 'id': 'price_1Kr6WwFIG5UVV1Tg6hgDc5Wm2',
                 'name': "15cm x 45cm x 20cm",
                 'description': "Ideal for clothes and big stuff",
-                'price': 320,
+                'price': 9,
                 'imageSrc': '',
                 'href': config('REACT_APP_URL') + 'product/' + str(0) + '/?selectedSizeId=' + str(0),
                 'minQuantity': 20
@@ -49,7 +49,7 @@ products = [
                 'id': 'price_1Kr6WwFIG5UVV1Tg6hgDc5Wm1',
                 'name': "25cm x 35cm x 10cm",
                 'description': "Enough room for a serious amount of snacks.",
-                'price': 160,
+                'price': 12,
                 'imageSrc': '',
                 'href': config('REACT_APP_URL') + 'product/' + str(0) + '/?selectedSizeId=' + str(0),
                 'minQuantity': 20
@@ -63,4 +63,8 @@ class ProductView(APIView):
     permission_classes = []
 
     def get(self, request, id):
-        return JsonResponse(products[id], safe=False)
+        try:
+            product=products[id]
+        except IndexError:
+            return JsonResponse({'message': 'No product found'}, safe=False, status=404)
+        return JsonResponse(product, safe=False)

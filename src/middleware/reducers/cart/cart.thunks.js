@@ -12,6 +12,9 @@ export const deleteCart = (id) => (dispatch) => {
 export const getProduct = (id) => (dispatch) => {
   CartService.getProduct(id).then((response) => {
     dispatch(actions.getProduct(response.data));
+  }).catch((err)=> {
+    console.log(err);
+    window.location.href = '/404'
   });
 };
 

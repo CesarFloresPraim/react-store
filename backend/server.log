@@ -327,3 +327,110 @@ Traceback (most recent call last):
     return JsonResponse(products[id], safe=False)
 IndexError: list index out of range
 [ERROR] 2022-04-21 22:37:02,792 "GET /api/v1.0/products/1 HTTP/1.1" 500 87925
+[ERROR] 2022-04-22 18:08:08,256 Internal Server Error: /api/v1.0/products/1
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py", line 66, in get
+    return JsonResponse(products[id], safe=False)
+IndexError: list index out of range
+[ERROR] 2022-04-22 18:08:08,265 "GET /api/v1.0/products/1 HTTP/1.1" 500 87925
+[INFO] 2022-04-22 18:08:12,106 "GET /api/v1.0/products/0 HTTP/1.1" 200 1158
+[ERROR] 2022-04-22 18:08:20,630 Internal Server Error: /api/v1.0/products/1
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py", line 66, in get
+    return JsonResponse(products[id], safe=False)
+IndexError: list index out of range
+[ERROR] 2022-04-22 18:08:20,631 "GET /api/v1.0/products/1 HTTP/1.1" 500 87925
+[ERROR] 2022-04-22 18:10:28,526 Internal Server Error: /api/v1.0/products/1
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py", line 66, in get
+    return JsonResponse(products[id], safe=False)
+IndexError: list index out of range
+[ERROR] 2022-04-22 18:10:28,534 "GET /api/v1.0/products/1 HTTP/1.1" 500 87925
+[ERROR] 2022-04-22 18:11:00,705 Internal Server Error: /api/v1.0/products/1
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py", line 66, in get
+    return JsonResponse(products[id], safe=False)
+IndexError: list index out of range
+[ERROR] 2022-04-22 18:11:00,707 "GET /api/v1.0/products/1 HTTP/1.1" 500 87925
+[INFO] 2022-04-22 18:14:06,555 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-22 18:14:08,551 Watching for file changes with StatReloader
+[INFO] 2022-04-22 18:14:43,618 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-22 18:14:44,174 Watching for file changes with StatReloader
+[INFO] 2022-04-22 18:14:46,602 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-22 18:14:47,170 Watching for file changes with StatReloader
+[WARNING] 2022-04-22 18:14:57,871 Not Found: /api/v1.0/products/1
+[WARNING] 2022-04-22 18:14:57,871 "GET /api/v1.0/products/1 HTTP/1.1" 404 31
+[INFO] 2022-04-22 18:15:01,183 "GET /api/v1.0/products/0 HTTP/1.1" 200 1158
+[WARNING] 2022-04-22 18:26:32,031 Not Found: /api/v1.0/products/2
+[WARNING] 2022-04-22 18:26:32,032 "GET /api/v1.0/products/2 HTTP/1.1" 404 31
+[WARNING] 2022-04-22 18:27:00,997 Not Found: /api/v1.0/products/1
+[WARNING] 2022-04-22 18:27:00,998 "GET /api/v1.0/products/1 HTTP/1.1" 404 31
+[INFO] 2022-04-22 18:27:25,795 "GET /api/v1.0/products/0 HTTP/1.1" 200 1158
+[INFO] 2022-04-22 18:29:02,577 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/products.py changed, reloading.
+[INFO] 2022-04-22 18:29:03,276 Watching for file changes with StatReloader
+[INFO] 2022-04-22 18:29:05,867 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
+[INFO] 2022-04-22 18:29:22,130 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
