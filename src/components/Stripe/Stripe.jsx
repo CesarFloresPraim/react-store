@@ -14,7 +14,7 @@ const getStripe = () => {
 };
 
 
-export default function Checkout() {
+export default function Stripe() {
     //* REDUX STATE
     const { cart } = useSelector((state) => state.cart);
 

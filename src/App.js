@@ -7,6 +7,7 @@ import Cart from "./views/Cart/Cart";
 import Thanks from "./views/Thanks/Thanks";
 import Rejected from "./views/Rejected/Rejected";
 import NotFound from "./views/NotFound/NotFound";
+import Checkout from "./views/Checkout/Checkout";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/cart" element={<Cart />}></Route>
         <Route exact path="/thanks" element={<Thanks />}></Route>
         <Route exact path="/rejected" element={<Rejected />}></Route>
+        <Route exact path="/checkout" element={<Checkout />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </Router>

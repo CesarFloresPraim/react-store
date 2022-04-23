@@ -28,22 +28,22 @@ export default function ProductDetail() {
   const [selectedSize, setSelectedSize] = useState(null);
 
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(getProduct(id))
-  },[])
+  }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     let selectedId = searchParams.get("selectedSizeId")
-    if (productDetail && productDetail?.sizes){
-      if(selectedId){
+    if (productDetail && productDetail?.sizes) {
+      if (selectedId) {
         setSelectedSize(productDetail?.sizes[selectedId])
       } else {
         setSelectedSize(productDetail?.sizes[0])
       }
     }
-  },[productDetail])
+  }, [productDetail])
 
-  
+
   //* METHODS
   const numberFormat = (number) => {
     let formatter = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'MXN' })
@@ -247,7 +247,7 @@ export default function ProductDetail() {
                       aria-hidden="true"
                     />
                     <span className="text-gray-500 hover:text-gray-700">
-                      Secure payment powered by Stripe
+                      SSL Secure payment powered by Stripe
                     </span>
                   </a>
                 </div>

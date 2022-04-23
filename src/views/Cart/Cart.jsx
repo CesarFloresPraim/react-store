@@ -7,8 +7,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import NavHeader from "../../components/NavHeader/NavHeader";
 import { updateProduct, deleteCart } from "../../middleware/reducers/cart/cart.thunks";
-import Checkout from "../../components/Checkout/Checkout";
-
+import { Link } from "react-router-dom";
 export default function Cart() {
   const dispatch = useDispatch();
   //* REDUX STATE
@@ -217,7 +216,20 @@ export default function Cart() {
               </dl>
 
               <div className="mt-6">
-                <Checkout></Checkout>
+                <Link
+                  to={{
+                    pathname: "/checkout",
+                  }}
+                >
+                  <button
+                    type="button"
+                    href='checkout/'
+                    className={`w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500 transition-all bg-gradient-to-r from-indigo-400 via-blue-500 to-indigo-900 ease-in-out duration-400 bg-right-bottom hover:bg-left-bottom`}
+                    style={{ backgroundSize: '200% 100%' }}
+                  >
+                    Checkout
+                  </button>
+                </Link>
               </div>
             </section>
           </form>
