@@ -434,3 +434,4 @@ IndexError: list index out of range
 [INFO] 2022-04-22 18:29:03,276 Watching for file changes with StatReloader
 [INFO] 2022-04-22 18:29:05,867 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
 [INFO] 2022-04-22 18:29:22,130 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
+[INFO] 2022-04-25 13:20:35,765 Watching for file changes with StatReloader

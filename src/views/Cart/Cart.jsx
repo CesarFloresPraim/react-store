@@ -50,9 +50,6 @@ export default function Cart() {
       return
     }
   };
-  const isFloat = (n) => {
-    return Number(n) === n && n % 1 !== 0;
-  }
   const sumCartTotal = () => {
     let total = 0
     for (const item of cart) {
@@ -60,12 +57,8 @@ export default function Cart() {
     }
     return total;
   };
-  const stripeCheckout = () => {
 
-  }
-
-
-  //WATCHERS
+  //* WATCHERS
   useEffect(() => {
     setOrderTotal(sumCartTotal())
   }, [])
@@ -83,7 +76,7 @@ export default function Cart() {
           <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Shopping Cart
           </h1>
-          <form onSubmit={stripeCheckout} className="mt-12 lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-start xl:gap-x-16">
+          <form className="mt-12 lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-start xl:gap-x-16">
             <section aria-labelledby="cart-heading" className="lg:col-span-7">
               <h2 id="cart-heading" className="sr-only">
                 Items in your shopping cart
