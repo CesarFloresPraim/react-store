@@ -170,11 +170,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function StateSelect() {
+export default function StateSelect({handleStateChange}) {
   const [selected, setSelected] = useState(states[0])
 
+  const handleSelectChange = (value) => {
+	handleStateChange(value)
+  }
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox value={selected} onChange={handleSelectChange}>
       {({ open }) => (
         <>
           <Listbox.Label className="block text-sm font-medium text-gray-700">State</Listbox.Label>

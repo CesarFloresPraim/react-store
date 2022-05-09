@@ -1,16 +1,24 @@
 import { Disclosure } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/solid";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import logo from "../../assets/images/inpack-logo.webp";
 import StateSelect from "../../components/StateSelect/StateSelect";
+import { createOrder } from "../../middleware/reducers/order/order.thunks";
 
 export default function Checkout() {
+  const dispatch = useDispatch()
   //* REDUX STATE
   const { cart } = useSelector((state) => state.cart);
 
   //* LOCAL STATE
   const [orderTotal, setOrderTotal] = useState(0);
+  const [orderEmail, setOrderEmail] = useState('');
+  const [orderPhone, setOrderPhone] = useState('');
+  const [orderAddress, setOrderAddress] = useState('');
+  const [orderCity, setOrderCity] = useState(0);
+  const [orderState, setOrderState] = useState(0);
+  const [orderZip, setOrderZip] = useState(0);
 
   //* METODS */
   const numberFormat = (number) => {
@@ -27,6 +35,26 @@ export default function Checkout() {
     }
     return total;
   };
+  const handleChildState = (value) => {
+    setOrderState(value)
+  }
+  const handleCheckout = (e) => {
+    e.preventDefault()
+    let data = {
+      cart: JSON.stringify(cart),
+      //total: 100,
+      //purchase_date: '',
+      email: orderEmail,
+      phone: orderPhone,
+      address: orderAddress,
+      city: orderCity,
+      state: orderState?.name,
+      zip_code: orderZip
+    }
+
+    dispatch(createOrder(data))
+    
+  };
   //* WATCHERS
   useEffect(() => {
     setOrderTotal(sumCartTotal());
@@ -35,6 +63,7 @@ export default function Checkout() {
   useEffect(() => {
     setOrderTotal(sumCartTotal());
   }, [cart]);
+
   //* TEMPLATE */
   return (
     <>
@@ -190,7 +219,7 @@ export default function Checkout() {
                 <img src={logo} alt="" className="h-14 w-auto" />
               </a>
             </div>
-            <form className="mt-6">
+            <form className="mt-6" onSubmit={(e) => { handleCheckout(e) }}>
               <div className="grid grid-cols-12 gap-y-6 gap-x-4">
                 <div className="col-span-full">
                   <label
@@ -201,6 +230,8 @@ export default function Checkout() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={orderEmail}
+                      onChange={(e) => { setOrderEmail(e.target.value) }}
                       type="email"
                       id="email-address"
                       name="email-address"
@@ -232,6 +263,8 @@ export default function Checkout() {
                       </select>
                     </div>
                     <input
+                      value={orderPhone}
+                      onChange={(e) => { setOrderPhone(e.target.value) }}
                       type="text"
                       name="phone-number"
                       id="phone-number"
@@ -250,6 +283,8 @@ export default function Checkout() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={orderAddress}
+                      onChange={(e) => { setOrderAddress(e.target.value) }}
                       type="text"
                       id="address"
                       name="address"
@@ -268,6 +303,8 @@ export default function Checkout() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={orderCity}
+                      onChange={(e) => { setOrderCity(e.target.value) }}
                       type="text"
                       id="city"
                       name="city"
@@ -277,7 +314,7 @@ export default function Checkout() {
                   </div>
                 </div>
                 <div className="col-span-full sm:col-span-4">
-                  <StateSelect></StateSelect>
+                  <StateSelect handleStateChange = {handleChildState}></StateSelect>
                 </div>
 
                 <div className="col-span-full sm:col-span-4">
@@ -289,6 +326,8 @@ export default function Checkout() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={orderZip}
+                      onChange={(e) => { setOrderZip(e.target.value) }}
                       type="text"
                       id="postal-code"
                       name="postal-code"

@@ -435,3 +435,175 @@ IndexError: list index out of range
 [INFO] 2022-04-22 18:29:05,867 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
 [INFO] 2022-04-22 18:29:22,130 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
 [INFO] 2022-04-25 13:20:35,765 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:08:40,754 Watching for file changes with StatReloader
+[WARNING] 2022-05-09 16:09:51,450 Not Found: /
+[WARNING] 2022-05-09 16:09:51,451 "GET / HTTP/1.1" 404 2699
+[WARNING] 2022-05-09 16:09:51,527 Not Found: /favicon.ico
+[WARNING] 2022-05-09 16:09:51,527 "GET /favicon.ico HTTP/1.1" 404 2750
+[INFO] 2022-05-09 16:09:56,769 "GET /admin HTTP/1.1" 301 0
+[INFO] 2022-05-09 16:09:56,791 "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2022-05-09 16:09:56,843 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+[INFO] 2022-05-09 16:09:56,876 "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[INFO] 2022-05-09 16:09:56,877 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+[INFO] 2022-05-09 16:09:56,878 "GET /static/admin/css/login.css HTTP/1.1" 200 939
+[INFO] 2022-05-09 16:09:56,879 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+[INFO] 2022-05-09 16:09:56,883 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[INFO] 2022-05-09 16:09:56,884 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[INFO] 2022-05-09 16:09:56,906 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[INFO] 2022-05-09 16:09:56,933 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[INFO] 2022-05-09 16:10:03,360 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2381
+[INFO] 2022-05-09 16:10:03,384 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[INFO] 2022-05-09 16:10:46,610 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:10:50,235 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2022-05-09 16:10:50,278 "GET /admin/ HTTP/1.1" 200 3332
+[INFO] 2022-05-09 16:10:50,294 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+[INFO] 2022-05-09 16:10:50,302 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[INFO] 2022-05-09 16:10:50,303 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[INFO] 2022-05-09 16:11:27,360 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/admin.py changed, reloading.
+[INFO] 2022-05-09 16:11:28,014 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:12:24,385 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/models/__init__.py changed, reloading.
+[INFO] 2022-05-09 16:12:24,997 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:12:35,934 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/admin.py changed, reloading.
+[INFO] 2022-05-09 16:12:36,539 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:12:45,305 "GET /admin/ HTTP/1.1" 200 3991
+[ERROR] 2022-05-09 16:12:46,707 Internal Server Error: /admin/inpackApp/sale/
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'inpack.inpackapp_sale' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1697, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 736, in get_changelist_instance
+    return ChangeList(
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/contrib/admin/views/main.py", line 100, in __init__
+    self.get_results(request)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/contrib/admin/views/main.py", line 235, in get_results
+    result_count = paginator.count
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/core/paginator.py", line 97, in count
+    return c()
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/models/query.py", line 412, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 528, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 513, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/cesarflores/Documents/Binara Solutions/react-store/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'inpack.inpackapp_sale' doesn't exist")
+[ERROR] 2022-05-09 16:12:46,737 "GET /admin/inpackApp/sale/ HTTP/1.1" 500 197944
+[INFO] 2022-05-09 16:20:32,772 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:20:40,378 "GET /admin/inpackApp/sale/ HTTP/1.1" 302 0
+[INFO] 2022-05-09 16:20:40,419 "GET /admin/login/?next=/admin/inpackApp/sale/ HTTP/1.1" 200 2249
+[INFO] 2022-05-09 16:20:52,761 "POST /admin/login/?next=/admin/inpackApp/sale/ HTTP/1.1" 302 0
+[INFO] 2022-05-09 16:20:52,801 "GET /admin/inpackApp/sale/ HTTP/1.1" 200 4967
+[INFO] 2022-05-09 16:20:52,815 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6874
+[INFO] 2022-05-09 16:20:52,816 "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+[INFO] 2022-05-09 16:20:52,817 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+[INFO] 2022-05-09 16:20:52,817 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[INFO] 2022-05-09 16:20:52,819 "GET /static/admin/js/actions.js HTTP/1.1" 200 7867
+[INFO] 2022-05-09 16:20:52,820 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+[INFO] 2022-05-09 16:20:52,820 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+[INFO] 2022-05-09 16:20:52,822 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[INFO] 2022-05-09 16:20:52,822 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[INFO] 2022-05-09 16:20:52,856 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+[INFO] 2022-05-09 16:20:52,881 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[INFO] 2022-05-09 16:20:55,410 "GET /admin/inpackApp/sale/add/ HTTP/1.1" 200 8760
+[INFO] 2022-05-09 16:20:55,436 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+[INFO] 2022-05-09 16:20:55,436 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+[INFO] 2022-05-09 16:20:55,436 "GET /static/admin/css/forms.css HTTP/1.1" 200 8804
+[INFO] 2022-05-09 16:20:55,447 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[INFO] 2022-05-09 16:20:55,448 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+[INFO] 2022-05-09 16:21:17,922 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/models/sale.py changed, reloading.
+[INFO] 2022-05-09 16:21:18,546 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:21:39,033 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:22:02,892 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/models/sale.py changed, reloading.
+[INFO] 2022-05-09 16:22:03,467 Watching for file changes with StatReloader
+[INFO] 2022-05-09 16:22:17,692 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:12:43,776 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/models/sale.py changed, reloading.
+[INFO] 2022-05-09 17:12:44,479 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:27:21,798 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/urls.py changed, reloading.
+[INFO] 2022-05-09 17:27:22,470 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:27:25,943 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/urls.py changed, reloading.
+[INFO] 2022-05-09 17:27:26,687 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:27:37,696 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/__init__.py changed, reloading.
+[INFO] 2022-05-09 17:27:38,427 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:37:44,677 "OPTIONS /api/v1.0/order HTTP/1.1" 301 0
+[INFO] 2022-05-09 17:38:28,951 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpack/settings/local.py changed, reloading.
+[INFO] 2022-05-09 17:38:29,631 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:38:33,088 "OPTIONS /api/v1.0/order HTTP/1.1" 301 0
+[INFO] 2022-05-09 17:38:57,387 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:39:01,773 "OPTIONS /api/v1.0/order HTTP/1.1" 301 0
+[INFO] 2022-05-09 17:40:03,800 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
+[INFO] 2022-05-09 17:40:25,623 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
+[INFO] 2022-05-09 17:40:49,567 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
+[INFO] 2022-05-09 17:41:06,261 "GET /api/v1.0/products/0 HTTP/1.1" 200 1153
+[INFO] 2022-05-09 17:41:55,270 "OPTIONS /api/v1.0/order HTTP/1.1" 301 0
+[INFO] 2022-05-09 17:42:26,926 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpack/settings/local.py changed, reloading.
+[INFO] 2022-05-09 17:42:27,630 Watching for file changes with StatReloader
+[ERROR] 2022-05-09 17:42:31,242 Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[WARNING] 2022-05-09 17:42:31,307 Bad Request: /api/v1.0/order
+[WARNING] 2022-05-09 17:42:31,307 "OPTIONS /api/v1.0/order HTTP/1.1" 400 67054
+[INFO] 2022-05-09 17:43:49,827 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpack/settings/local.py changed, reloading.
+[INFO] 2022-05-09 17:43:50,363 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:43:53,804 "OPTIONS /api/v1.0/order HTTP/1.1" 301 0
+[INFO] 2022-05-09 17:44:41,859 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpack/settings/local.py changed, reloading.
+[INFO] 2022-05-09 17:44:42,450 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:44:43,815 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpack/settings/local.py changed, reloading.
+[INFO] 2022-05-09 17:44:44,181 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:44:55,100 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpack/settings/local.py changed, reloading.
+[INFO] 2022-05-09 17:44:55,610 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:45:11,176 "OPTIONS /api/v1.0/order HTTP/1.1" 301 0
+[INFO] 2022-05-09 17:46:12,615 /Users/cesarflores/Documents/Binara Solutions/react-store/backend/inpackApp/views/order.py changed, reloading.
+[INFO] 2022-05-09 17:46:13,253 Watching for file changes with StatReloader
+[INFO] 2022-05-09 17:48:46,735 "OPTIONS /api/v1.0/order/ HTTP/1.1" 200 0
+[INFO] 2022-05-09 17:48:46,741 "POST /api/v1.0/order/ HTTP/1.1" 200 12
